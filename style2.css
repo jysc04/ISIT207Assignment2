@@ -1,0 +1,195 @@
+        :root {
+            --orange: #FF7700;
+            --ink: #11251f;
+            --muted: #64736e;
+            --line: #dce7e1;
+            --cream: #f7f8f4;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--ink);
+            background: var(--cream);
+        }
+
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--line);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header span {
+            color: var(--orange);
+        }
+
+        button, input, select, textarea {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: 0;
+            border-radius: 8px;
+            padding: 10px 15px;
+        }
+
+        .logout {
+            background: var(--orange);
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            color: var(--muted);
+        }
+
+        #reservationList {
+            display: grid;
+            gap: 22px;
+        }
+
+        .reservation-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 5px 20px rgba(17, 37, 31, 0.05);
+        }
+
+        .card-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 15px;
+            margin-bottom: 18px;
+        }
+
+        .card-heading h2 {
+            margin: 0 0 5px;
+        }
+
+        .booking-id {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .detail {
+            padding: 12px;
+            background: var(--cream);
+            border-radius: 9px;
+            overflow-wrap: anywhere;
+        }
+
+        .detail small {
+            display: block;
+            color: var(--muted);
+            margin-bottom: 5px;
+        }
+
+        .management {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: white;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .bill {
+            background: #fff1e6;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .bill p {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 7px 0;
+        }
+
+        .bill .total {
+            border-top: 1px solid #e8c8ad;
+            padding-top: 12px;
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .save {
+            background: var(--orange);
+            color: white;
+            font-weight: bold;
+            margin-top: 18px;
+            width: 100%;
+        }
+
+        .empty {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 700px) {
+            .details, .management {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 19px;
+            }
+        }

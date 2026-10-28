@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <a href="#">
+                <!--Logo-->
+                <img src="img/logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <!--Hamburger Icon-->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav" type="button">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!--Nav Links-->
+        <nav id="mobileNav">
+            <a href="#home">Home</a>    
+            <a href="#cars">Our Fleet</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Support</a>
+
+            <!--Login Btn-->
+            <button class="btn btn-outline" id="LoginBtn" type="button">
+                Login
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!--Hero Section-->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="img">
+                    <img id="heroImage" src="img/hero.jpg" alt="Electric car">
+                </div>
+                <!--Small Heading-->
+                <p class="small-text"> AZOOM CAR RENTAL</p>
+
+                <!--Main Heading-->
+                <h1>
+                    The Future of Cars is here. <br>
+                    <span>Rent an electric car today!</span>
+                </h1>
+
+
+                <p class="hero-text">
+                    Affordable and eco-friendly electric car rental services for your daily commute or weekend getaways. Choose from a wide range of electric vehicles and enjoy a smooth, sustainable ride.
+                </p>
+
+                <!--Hero Btns-->
+                <div class="hero-buttons">
+                    <a href="#cars" class="btn btn-primary"> Browse Cars</a>
+                    <button class="btn btn-secondary" id="ReserveBtn">Reserve Now</button>
+                </div>
+                <!--Trust Stats-->
+                <div class="TrustRow">
+
+                    <div>
+                        <strong>150+</strong>
+                        <span>Electric Cars Available</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Customer Support</span>
+                    </div>
+
+                    <div>
+                        <strong>4.9★</strong>
+                        <span>Avg. Rating</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        
+        <!--Car Fleet-->
+        <section id="cars" class="section">
+            <div class="section-head">
+                <div>
+                    <p class="small-text">OUR CARS</p>
+                    <h2>Pick Your Perfect Ride</h2>
+                </div>
+                <div class="filters">
+                    <select id="typeFilter">
+                        <option value="all">All Cars</option>
+                        <option value="SUV"> SUV</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Sedan">Sedan</option>
+                    </select>
+
+                    <select id="timeFilter">
+                        <option value="daily">
+                            Daily Rates
+                        </option>
+
+                        <option value="weekly">
+                        Weekly Rates
+                        </option>
+
+                        <option value="monthly">
+                            Monthly Rates
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Car Grid-->
+            <div class="car-grid" id="carGrid">
+
+                <article class="car-card" data-type="SUV">
+                    <div class="car-image">
+                        <img src="img/TeslaY.jpg" alt="Tesla Model Y">
+                    </div>
+
+                    <div class="car-info">
+                        <div class="car-title-row">
+                            <div>
+                                <h3>Tesla Model Y</h3>
+                                <span class="tag">Electric · SUV</span>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            $100 <small>/ Day</small>
+                        </div>
+
+                        <div class="car-specs">
+                            <span>👥 4 Seats</span>
+                            <span>🧳 1 Large + 2 Small</span>
+                            <span>⚡ 400 KM Range</span>
+                            <span>🔋 Electric</span>
+                        </div>
+
+                        <button class="btn btn-primary rent-btn">
+                            Rent Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-type="Sedan">
+                    <div class="car-image">
+                        <img src="img/TeslaM3.jpg" alt="Tesla Model 3">
+                    </div>
+
+                    <div class="car-info">
+                        <div class="car-title-row">
+                            <div>
+                                <h3>Tesla Model 3</h3>
+                                <span class="tag">Electric · Sedan</span>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            $75 <small>/ Day</small>
+                        </div>
+
+                        <div class="car-specs">
+                            <span>👥 4 Seats</span>
+                            <span>🧳 1 Large + 2 Small</span>
+                            <span>⚡ 400 KM Range</span>
+                            <span>🔋 Electric</span>
+                        </div>
+
+                        <button class="btn btn-primary rent-btn">
+                            Rent Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-type="Premium">
+                    <div class="car-image">
+                        <img src="img/BMWi7.jpg" alt="BMW i7">
+                    </div>
+
+                    <div class="car-info">
+                        <div class="car-title-row">
+                            <div>
+                                <h3>BMW i7</h3>
+                                <span class="tag">Electric · Premium</span>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            $200 <small>/ Day</small>
+                        </div>
+
+                        <div class="car-specs">
+                            <span>👥 4 Seats</span>
+                            <span>🧳 1 Large + 2 Small</span>
+                            <span>⚡ 400 KM Range</span>
+                            <span>🔋 Electric</span>
+                        </div>
+
+                        <button class="btn btn-primary rent-btn">
+                            Rent Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-type="SUV">
+                    <div class="car-image">
+                        <img src="img/BydSealion7.jpg" alt="BYD Sealion 7">
+                    </div>
+
+                    <div class="car-info">
+                        <div class="car-title-row">
+                            <div>
+                                <h3>BYD Sealion 7</h3>
+                                <span class="tag">Electric · SUV</span>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            $100 <small>/ Day</small>
+                        </div>
+
+                        <div class="car-specs">
+                            <span>👥 4 Seats</span>
+                            <span>🧳 1 Large + 2 Small</span>
+                            <span>⚡ 400 KM Range</span>
+                            <span>🔋 Electric</span>
+                        </div>
+
+                        <button class="btn btn-primary rent-btn">
+                            Rent Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-type="Premium">
+                    <div class="car-image">
+                        <img src="img/BMWi5.jpg" alt="BMW i5">
+                    </div>
+
+                    <div class="car-info">
+                        <div class="car-title-row">
+                            <div>
+                                <h3>BMW i5</h3>
+                                <span class="tag">Electric · Premium</span>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            $200 <small>/ Day</small>
+                        </div>
+
+                        <div class="car-specs">
+                            <span>👥 4 Seats</span>
+                            <span>🧳 1 Large + 2 Small</span>
+                            <span>⚡ 400 KM Range</span>
+                            <span>🔋 Electric</span>
+                        </div>
+
+                        <button class="btn btn-primary rent-btn">
+                            Rent Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-type="Sedan">
+                    <div class="car-image">
+                        <img src="img/BYDSeal.jpg" alt="BYD Seal">
+                    </div>
+
+                    <div class="car-info">
+                        <div class="car-title-row">
+                            <div>
+                                <h3>BYD Seal</h3>
+                                <span class="tag">Electric · Sedan</span>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            $75 <small>/ Day</small>
+                        </div>
+
+                        <div class="car-specs">
+                            <span>👥 4 Seats</span>
+                            <span>🧳 1 Large + 2 Small</span>
+                            <span>⚡ 400 KM Range</span>
+                            <span>🔋 Electric</span>
+                        </div>
+
+                        <button class="btn btn-primary rent-btn">
+                            Rent Now
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!--How it works Section-->
+        <section id="how-it-works" class="how-it-works-section">
+            <div class="section-head">
+                <div>
+                    <p class="small-text">HOW IT WORKS</p>
+                    <h2>Step-by-Step Guide!</h2>
+                </div>
+            </div>
+            <!--Step by step Grid-->
+            <div class="steps-grid">
+                <article class="steps-card">
+                    <div class="stepNumber">1</div>
+
+                    <div class="stepsIcon">📅</div>
+
+                    <h3>Reserve Your Car Online</h3>
+                    <p>Choose your preferred electric car, select your rental
+                        dates and branch, then complete your reservation online.
+                    </p>
+
+                    <div class="step-footer">
+                        <span>💳</span>
+                        Secure online booking
+                    </div>
+                </article>
+
+                <article class="steps-card">
+                    <div class="stepNumber">2</div>
+
+                    <div class="stepsIcon">🔑</div>
+
+                    <h3>Collect Your Vehicle</h3>
+                    <p>Visit your selected AZoom branch and complete the rental process 
+                        and collect your reserved electric vehicle!
+                    </p>
+
+                    <div class="step-footer">
+                        <span>📍</span>
+                        Pickup at our branch
+                    </div>
+                </article>
+
+                <article class="steps-card">
+                    <div class="stepNumber">3</div>
+
+                    <div class="stepsIcon">🚗</div>
+
+                    <h3>Return At The Designated Carpark</h3>
+                    <p>When your rental period ends, return the vehicle to the
+                        designated car park agreed upon during your rental!
+                    </p>
+
+                    <div class="step-footer">
+                        <span>🅿️</span>
+                        Dropoff at carpark
+                    </div>
+                </article>
+
+                <article class="steps-card">
+                    <div class="stepNumber">4</div>
+
+                    <div class="stepsIcon">🔍</div>
+
+                    <h3>Vehicle Inspection</h3>
+                    <p>Our employees will inspect the returned vehicle's condition 
+                        and identify any damages.
+                    </p>
+
+                    <div class="step-footer">
+                        <span>✓</span>
+                        Condition checked by staff
+                    </div>
+                </article>
+
+                <article class="steps-card">
+                    <div class="stepNumber">5</div>
+
+                    <div class="stepsIcon">💳</div>
+
+                    <h3>Pay Your Final Bill</h3>
+                    <p>Review your final bill, including the rental charge and any applicable
+                        repair costs, and pay by credit card!
+                    </p>
+
+                    <div class="step-footer">
+                        <span>✓</span>
+                        Credit Card payment only
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--Review-->
+        <section id="reviews" class="reviews-section">
+
+            <div class="section-head">
+                <div>
+                    <p class="small-text">REVIEWS</p>
+                    <h2>Hear From Others!</h2>
+                </div>
+            </div>
+
+            <!--Review Scroll-->
+            <div class="reviews-container">
+                <button class="review-arrow review-prev" id="reviewPrev">&#10094;</button>
+
+                <div class="reviews-window">
+                    <div class="reviews-track" id="reviewsTrack">
+                        <article class="review-card">
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text">
+                                "The rental process was incredibly easy.
+                        The car was clean, comfortable, and ready when
+                        I arrived. I would definitely rent from AZoom again."
+                            </p>
+
+                            <div class="review-customer">
+                                <div class="customer-avatar">
+                                    <img src="img/JD.jpg">
+                                </div>
+
+                                <div>
+                                    <h3>John Davis</h3>
+                                    <span>Verified Customer</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="review-card">
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text">
+                                "Great experience from start to finish. The staff
+                                were friendly and helpful, and the weekly rental
+                                price was very reasonable."
+                            </p>
+
+                            <div class="review-customer">
+                                <div class="customer-avatar">
+                                    <img src="img/SM.jpg">
+                                </div>
+
+                                <div>
+                                    <h3>Sarah Miller</h3>
+                                    <span>Verified Customer</span>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="review-card">
+
+                            <div class="review-stars">
+                                ★★★★☆
+                            </div>
+
+                            <p class="review-text">
+                                "The booking system was simple and the vehicle was
+                                exactly what I expected. Pickup and return were
+                                both quick and hassle-free."
+                            </p>
+
+                            <div class="review-customer">
+                                <div class="customer-avatar">
+                                    <img src="img/MK.jpg">
+                                </div>
+
+                                <div>
+                                    <h3>Michael Kim</h3>
+                                    <span>Verified Customer</span>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="review-card">
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text">
+                                "I needed a car for a month and AZoom made the
+                                entire process very straightforward. Excellent
+                                service and a great vehicle."
+                            </p>
+
+                            <div class="review-customer">
+                                <div class="customer-avatar">
+                                    <img src="img/EW.jpg">
+                                </div>
+
+                                <div>
+                                    <h3>Emily Wong</h3>
+                                    <span>Verified Customer</span>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="review-card">
+
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text">
+                                "Very impressed with the quality of the car and
+                                the service. Everything was exactly as advertised."
+                            </p>
+
+                            <div class="review-customer">
+                                <div class="customer-avatar">
+                                    <img src="img/DL.jpg">
+                                </div>
+
+                                <div>
+                                    <h3>Daniel Lee</h3>
+                                    <span>Verified Customer</span>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="review-card">
+
+                            <div class="review-stars">
+                                ★★★★☆
+                            </div>
+
+                            <p class="review-text">
+                                "The staff were professional and the rental was
+                                reasonably priced. I had a very good experience
+                                overall."
+                            </p>
+
+                            <div class="review-customer">
+                                <div class="customer-avatar">
+                                    <img src="img/AL.jpg">
+                                </div>
+
+                                <div>
+                                    <h3>Alex Lim</h3>
+                                    <span>Verified Customer</span>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <button class="review-arrow review-next" id="reviewNext">&#10095;</button>
+            </div>
+        </section>
+
+        <!--About Us-->
+        <section id="about" class="section">
+            <div class="section-head">
+                <div>
+                    <p class="small-text">ABOUT US</p>
+                    <h2>Why Choose AZoom?</h2>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Driving Towards a Greener Future.</h2>
+
+                    <p>
+                        At AZoom, we are committed to providing our customers with an affordable,
+                        convenient, and eco-friendly electric car rental experience.
+                    </p>
+
+                    <p>
+                        Whether you're commuting to work or planning a weekend getaway,
+                        our range of electric vehicles offers comfort, efficiency, and a smooth
+                        driving experience.
+                    </p>
+
+                    <ul class="about-benefits">
+                        <li>Wide Range of Electric Vehicles</li>
+                        <li>Affordable & Flexible Rental Plans</li>
+                        <li>Convenient Pickup and Return Locations</li>
+                        <li>Reliable Customer Support</li>
+                    </ul>
+
+                    <a href="#cars" class="btn btn-primary about-btn">Explore Our Cars</a>
+                </div>
+
+                <div class="about-image">
+                    <img src="img/aboutus.jpg" alt="AboutImage">
+                    
+                </div>
+
+        </section>
+        <!--Contact Us-->
+        <section id="contact" class="section">
+            <div class="section-head">
+                <div>
+                    <p class="small-text">CONTACT US</p>
+                    <h2>Get in Touch</h2>
+
+                    <p class="contact-intro">Have questions? Get in touch with us or visit your nearest AZoom branch. We're happy to help!</p>
+                </div>
+            </div>
+
+            <!--Location Cards-->
+            <div class="location-grid">
+                <article class="location-card">
+                    <div class="location-map">
+                        <iframe src="https://maps.google.com/maps?q=Bedok%20North%2C%20Singapore&output=embed" width="100%" height="280" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing AZoom Bedok North">
+                        </iframe>
+                    </div>
+
+                    <div class="location-info">
+                        <span class="location-tag">BRANCH 1</span>
+                        <h3>Bedok North</h3>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">📍</span>
+                            <div>
+                                <strong>Address</strong>
+                                <p>651 Bedok North Rd, Singapore 479481</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <strong>Phone Number</strong>
+                                <p><a href="tel:+6561234567">+65 6123 4567</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:support@azoom.com">support@azoom.com</a></p>
+                            </div>
+                        </div>
+
+                        <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=Bedok+North+Singapore" target="_blank" rel="noopener noreferrer">Get Directions ↗</a>
+                    </div>
+                </article>
+
+                <article class="location-card">
+                    <div class="location-map">
+                        <iframe src="https://maps.google.com/maps?q=Bedok%20South%2C%20Singapore&output=embed" width="100%" height="280" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing AZoom Bedok South">
+                        </iframe>
+                    </div>
+
+                    <div class="location-info">
+                        <span class="location-tag">BRANCH 2</span>
+                        <h3>Bedok South</h3>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">📍</span>
+                            <div>
+                                <strong>Address</strong>
+                                <p>Block 15 Bedok South Road, Singapore 460015</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <strong>Phone Number</strong>
+                                <p><a href="tel:+6562345678">+65 6234 5678</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="detail-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:support@azoom.com">support@azoom.com</a></p>
+                            </div>
+                        </div>
+
+                        <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=Bedok+South+Singapore" target="_blank" rel="noopener noreferrer">Get Direction ↗</a>
+                    </div>
+                </article>
+            </div>
+
+
+
+        </section>
+
+        <!--Final CTA-->
+        <section class="call-to-action">
+            <div>
+                <p class="small-text">Ready to Drive?</p>
+                <h2>Reserve Your Electric Car Today!</h2>
+            </div>
+            <button class="btn btn-secondary" id="CTAReserveBtn">Book Now</button> <!--CTA Btn-->
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <img src="img/logo.png" alt="AZoom">
+                </a>
+
+                <p>Your electric journey starts here.
+                    Discover convenient, affordable and eco-friendly
+                    electric car rentals with AZoom.
+                </p>
+
+                <p class="footer-note">
+                    Drive Smarter, Travel Greener.
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/"><img class="footer-icon" src="social/facebook.png"></a>
+                    <a href="https://www.instagram.com/"><img class="footer-icon" src="social/insta.png"></a>
+                    <a href="https://www.x.com/"><img class="footer-icon" src="social/x.png"></a>
+                </div>
+            </div>
+            
+
+            <div class="footer-link">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cars">Our Cars</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-link">
+                <h3>Rental Information</h3>
+                <ul>
+                    <li><a href="#cars">Browse Vehicles</a></li>
+                    <li><a href="#contact">Our Locations</a></li>
+                    <li><a href="#contact">Support</a></li>
+                    <li><a href="#home" id="footerReserveBtn">Reserve a Car</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Get in Touch</h3>
+
+                <p>
+                    <span>✉</span>
+                    <a href="mailto:support@azoom.com">support@azoom.com</a>
+                </p>
+                <div class="footer-location">
+                <p>
+                    <span>📍</span>
+                    North &amp; Bedok South
+                </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AZoom. All rights reserved.</p>
+        </div>
+
+
+    </footer>
+
+    <!--Reservation Modal-->
+    <div class="modal" id="reservationModal" aria-hidden="true">
+        <div class="modal-box">
+            <button class="close" data-close="reservationModal">
+                &times;
+            </button>
+
+            <div class="modal-header">
+                <p class="small-text">RESERVE NOW</p>
+                <h3>Payment and Reservation are by Credit Card Only.</h3>
+            </div>
+
+            <form id="reservationForm">
+                <div class="form-grid">
+                    <label>
+                        Full Name:
+                        <input id="CustomerName" required placeholder="John Doe">
+                    </label>
+
+                    <label>
+                        Email:
+                        <input id="CustomerEmail" type="email" required placeholder="johndoe@example.com" onkeydown="return event.key !== ' '" oninput="this.value = this.value.replace(/\s/g, '')">
+                    </label>
+
+                    <label>
+                        Car Model:
+                        <select id="CarModel" required>
+                            <option value="Tesla-MY" data-type="SUV">Tesla Model Y</option>
+                            <option value="Tesla-M3" data-type="Sedan">Tesla Model 3</option>
+                            <option value="BMW-i7" data-type="Premium">BMW i7</option>
+                            <option value="BYD-Sealion" data-type="SUV">BYD Sealion 7</option>
+                            <option value="BMW-i5" data-type="Premium">BMW i5</option>
+                            <option value="BYD-Seal" data-type="Sedan">BYD Seal</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Rental Duration:
+                        <select id="RentalDuration" required>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Pickup Branch:
+                        <select id="PickupBranch" required>
+                            <option value="downtown">Bedok North</option>
+                            <option value="airport">Bedok South</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Pickup Date:
+                        <input id="PickupDate" type="date" required>
+                    </label>
+
+                    <label>
+                        Return Date:
+                        <input id="ReturnDate" type="date" required>
+                    </label>
+
+                    <label>
+                        Credit Card Number:
+                        <input id="CreditCardNumber" inputmode="numeric" maxlength="19" required placeholder="1234 5678 9012 3456" oninput="this.value = this.value.replace(/[^0-9 ]/g, '')">
+                    </label>
+
+                </div>
+
+                <div class="preview-price">
+                    <span>Estimated Total: $</span>
+                    <strong id="estimatedPrice">0.00</strong>
+                </div>
+
+                <label class="check">
+                    <input type="checkbox" required>
+                    I agree to the rental terms and policy.
+                </label>
+
+                <button class="btn btn-primary full" type="submit">
+                    Confirm Reservation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!--Login Modal-->
+    <div class="modal" id="loginModal" aria-hidden="true">
+        <div class="modal-box small">
+
+            <button class="close" data-close="loginModal"> &times;</button> <!--Close btn-->
+            <p class="small-text">CUSTOMER PORTAL</p>
+            <h2>Welcome Back!</h2>
+
+            <form id="loginForm">
+                <label>
+                    Email:
+                    <input type="email" id="loginEmail" required placeholder="johndoe@example.com">
+                </label>
+
+                <label>
+                    Password:
+                    <input type="password" id="loginPassword" required placeholder="********">
+                </label>
+
+                <a href="#" id="forgetPassword">Forget Password?</a><br>
+                <a href="#" id="showSignup">Don't have an account? Sign up here</a>
+
+                <button class="btn btn-primary full" type="submit">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!--Sign Up Modal-->
+    <div class="modal" id="signupModal" aria-hidden="true"> 
+        <div class="modal-box small">
+
+            <button class="close" data-close="signupModal">&times;</button>
+        
+
+            <p class="small-text">CUSTOMER PORTAL</p>
+            <h2>Create Account</h2>
+
+            <form id="signupForm">
+                <label>Full Name:
+                    <input type="text" id="signupName" required placeholder="John Doe">
+                </label>
+
+                <label>Email:
+                    <input type="email" id="signupEmail" required placeholder="johndoe@gmail.com">
+                </label>
+
+                <label>Password:
+                    <input type="password" id="signupPassword" required placeholder="**********">
+                </label>
+
+                <label>Confirm Password:
+                    <input type="password" id="signupConfirmPassword" required placeholder="***********">
+                </label>
+
+                <button class="btn btn-primary full" type="submit">Sign Up</button>
+
+                <a href="#" id="showLogin">Already have an account? Login here!</a>
+            </form>
+        </div>
+    </div>
+
+    <!--Forgot PW Modal-->
+    <div class="modal" id="forgetPasswordModal" aria-hidden="true">
+        <div class="modal-box small">
+
+            <button class="close" data-close="forgetPasswordModal">&times;</button>
+
+            <p class="small-text">CUSTOMER PORTAL</p>
+            <h2>Reset Password</h2>
+
+            <p class="forgetDescription">
+                Enter your registered email address and enter a new password.
+            </p>
+
+            <form id="forgetPasswordForm">
+                <label>Email: 
+                    <input type="email" id="resetEmail" required placeholder="johndoe@gmail.com">
+                </label>
+
+                <label>New Password: 
+                    <input type="password" id="newPassword" required minlength="8" placeholder="At least 8 Characters">
+                </label>
+
+                <label>Confirm New Password: 
+                    <input type="password" id="confirmNewPassword" required minlength="8" placeholder="Enter your new password again.">
+                </label>
+
+                <button class="btn btn-primary full" type="submit">Reset Password</button>
+
+                <a href="#" id="backToLogin">Back To Login</a>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+        
+</body>
+</html>
